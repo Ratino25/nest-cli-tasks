@@ -5,10 +5,7 @@ import { TasksService } from './tasks.service';
 @Controller('tasks')
 export class TasksController {
 
-    tasksService: TasksService;
-
-    constructor(){
-        this.tasksService = new TasksService();
+    constructor(public tasksService : TasksService){
     }
 
     @Get()
